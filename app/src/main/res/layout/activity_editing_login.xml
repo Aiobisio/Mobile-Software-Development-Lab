@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <EditText
+        android:id="@+id/edt_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/pale_green_background"
+        android:gravity="center"
+        android:hint="User Name"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#33691E"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edt_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/edt_1"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/pale_green_background"
+        android:gravity="center"
+        android:hint="Secret Code"
+        android:inputType="numberPassword"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_2"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/judge_background"
+        android:text="Sign In"
+        android:textSize="20dp" />
+
+</RelativeLayout>

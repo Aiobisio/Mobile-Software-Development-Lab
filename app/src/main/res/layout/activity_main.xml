@@ -4,10 +4,24 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <Button
+        android:id="@+id/btn_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edittext"
+        android:textSize="20sp"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textSize="20sp"
+        android:textAllCaps="false"/>
+    <Button
         android:id="@+id/btn_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/recyclerview"
-        android:textAllCaps="false"
-        android:textSize="25sp"/>
+        android:textSize="20sp"
+        android:textAllCaps="false"/>
 </LinearLayout>

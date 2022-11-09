@@ -1,6 +1,10 @@
 package com.jnu.student.RecyclerView;
 
+import static com.jnu.student.BookListFragment.MENU_ID_ADD;
+import static com.jnu.student.BookListFragment.MENU_ID_DELETE;
+import static com.jnu.student.BookListFragment.MENU_ID_UPDATE;
 import android.content.Context;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,15 +47,22 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.Linear
     public int getItemCount() {
         return bookList.size();
     }
-    class LinearViewHoder extends RecyclerView.ViewHolder{
+    class LinearViewHoder extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener {
         TextView textView;
         ImageView head;
+
         public LinearViewHoder(@NonNull View itemView) {
             super(itemView);
-            this.textView=itemView.findViewById(R.id.text_view_book_title);
-            this.head=itemView.findViewById(R.id.image_view_book_cover);
+            this.textView = itemView.findViewById(R.id.text_view_book_title);
+            this.head = itemView.findViewById(R.id.image_view_book_cover);
+            itemView.setOnCreateContextMenuListener(this);
+        }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
+        contextMenu.add(0, MENU_ID_ADD, getAdapterPosition(), "Add" + getAdapterPosition());
+        contextMenu.add(0, MENU_ID_UPDATE, getAdapterPosition(), "Update" + getAdapterPosition());
+        contextMenu.add(0, MENU_ID_DELETE, getAdapterPosition(), "Delete" + getAdapterPosition());
         }
     }
-
-
 }

@@ -1,4 +1,11 @@
 <resources>
-    <string name="app_name">Book List Viewer</string>
+    <string name="app_name">Book Shelf</string>
     <string name="recyclerview">RecyclerView</string>
+    <string name="edittext">Edit Text</string>
+    <string name="login">Sign in</string>
+    <string name="string_confirm">Confirm</string>
+    <string name="string_sure_to_delete">Sure to Delete This Book ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
