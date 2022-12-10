@@ -27,8 +27,8 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 import com.jnu.student.BookListFragment;
 import com.jnu.student.BrowserFragment;
-import com.jnu.student.EditTextActivity;
 import com.jnu.student.BaiduMapFragment;
+import com.jnu.student.GameFragment;
 import com.jnu.student.R;
 import com.jnu.student.Data.DataProcessing;
 
@@ -52,7 +52,7 @@ public class BookListMainActivity extends AppCompatActivity {
                 case 1:
                     return BrowserFragment.newInstance();
                 case 2:
-                    return BaiduMapFragment.newInstance();
+                    return GameFragment.newInstance();
             }
             return BookListFragment.newInstance();
         }
@@ -81,8 +81,10 @@ public class BookListMainActivity extends AppCompatActivity {
                         tab.setText("新闻");
                         break;
                     case 2:
-                        tab.setText("卖家");
-                        break;
+                        tab.setText("游戏");
+                    //case 3:
+                        //tab.setText("卖家");
+                        //break;
                 }
             }
         });
