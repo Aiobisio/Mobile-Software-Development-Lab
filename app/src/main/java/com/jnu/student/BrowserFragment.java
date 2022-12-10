@@ -1,5 +1,7 @@
 package com.jnu.student;
 
+import static com.jnu.student.R.id.web_context;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -44,7 +46,7 @@ public class BrowserFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView=inflater.inflate(R.layout.fragment_browser, container, false);
-        WebView webView=rootView.findViewById(R.id.web_context);
+        WebView webView=rootView.findViewById(web_context);
         WebSettings webSettings=webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webView.loadUrl("https://www.sina.com.cn/");

@@ -28,6 +28,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 import com.jnu.student.BookListFragment;
 import com.jnu.student.BrowserFragment;
 import com.jnu.student.EditTextActivity;
+import com.jnu.student.BaiduMapFragment;
 import com.jnu.student.R;
 import com.jnu.student.Data.DataProcessing;
 
@@ -36,14 +37,6 @@ import java.util.ArrayList;
 public class BookListMainActivity extends AppCompatActivity {
 
     public class PageViewFragmentAdapter extends FragmentStateAdapter{
-
-        public PageViewFragmentAdapter(@NonNull FragmentActivity fragmentActivity) {
-            super(fragmentActivity);
-        }
-
-        public PageViewFragmentAdapter(@NonNull Fragment fragment) {
-            super(fragment);
-        }
 
         public PageViewFragmentAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
             super(fragmentManager, lifecycle);
@@ -58,6 +51,8 @@ public class BookListMainActivity extends AppCompatActivity {
                     return BookListFragment.newInstance();
                 case 1:
                     return BrowserFragment.newInstance();
+                case 2:
+                    return BaiduMapFragment.newInstance();
             }
             return BookListFragment.newInstance();
         }

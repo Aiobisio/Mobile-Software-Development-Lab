@@ -1,12 +1,11 @@
 package com.jnu.student.Data;
 
-import com.jnu.student.RecyclerView.Book;
+import java.io.Serializable;
 
-public class BookItem extends Book {
+public class BookItem implements Serializable {
     private String title;
     private int headId;
     public BookItem(String title, int headId) {
-        super(title, headId);
         this.title = title;
         this.headId = headId;
     }

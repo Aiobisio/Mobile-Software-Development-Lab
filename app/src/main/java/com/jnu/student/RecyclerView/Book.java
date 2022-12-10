@@ -1,6 +1,6 @@
 package com.jnu.student.RecyclerView;
-
-public class Book {
+import java.io.Serializable;
+public class Book implements Serializable{
     private String title;
     private int headId;
 
